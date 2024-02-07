@@ -19,7 +19,6 @@
 
 
 /* font declarations */
-
 @font-face {
     font-family: "Atkinson Hyperlegible";
     src: url("assets/fonts/Atkinson-Hyperlegible-Regular.otf");
@@ -37,7 +36,6 @@
 
 
 /* general text styles */
-
 * {
     text-align: center;
     background-color: var(--bg_primary);
@@ -67,7 +65,6 @@ small {
 
 
 /* ability scores and bonuses */
-
 .flex-row {
     display: flex;
     flex-flow: row wrap;
@@ -97,12 +94,12 @@ small {
     text-align: left;
 }
 
-/* makes proficiency textbox appear on the same line as the "Proficiency bonus" text */
-#proficiency-textbox {
+/* makes the proficiency textbox appear on the same line as the "Proficiency bonus" label text */
+#prof-textbox {
     display: flex; 
 }
 
-#proficiency-textbox input[type=number] {
+#prof-textbox input[type=number] {
     display: block;
     box-sizing: border-box;
     border: 2px solid var(--txt_primary) ;
@@ -119,13 +116,12 @@ small {
 
 
 /* d20 */
-
 .d20-container {
     position: relative;
     text-align: center;
 }
 
-#d20 {
+#d20-txt {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -136,7 +132,7 @@ small {
     background-color: transparent;
 }
 
-img {
+#d20-img {
     width:400px;
     border-radius: 25px;
     border: var(--txt_primary) solid 3px;

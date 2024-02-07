@@ -15,12 +15,12 @@
         <small>(Typically range ~ 8-20)</small>
     </h2>
     <div class="flex-row">
-        <label>Strength<input type="number" id="str" placeholder="10"></label>
-        <label>Dexterity<input type="number" id="dex" placeholder="10"></label>
-        <label>Constitution<input type="number" id="con" placeholder="10"></label>
-        <label>Intelligence<input type="number" id="int" placeholder="10"></label>
-        <label>Wisdom<input type="number" id="wis" placeholder="10"></label>
-        <label>Charisma<input type="number" id="cha" placeholder="10"></label>
+        <label>Strength<input type="number" id="str" value="10"></label>
+        <label>Dexterity<input type="number" id="dex" value="10"></label>
+        <label>Constitution<input type="number" id="con" value="10"></label>
+        <label>Intelligence<input type="number" id="int" value="10"></label>
+        <label>Wisdom<input type="number" id="wis" value="10"></label>
+        <label>Charisma<input type="number" id="cha" value="10"></label>
     </div>
 
     <br>
@@ -30,7 +30,7 @@
         <div class="flex-col">
             <h2>Roll for which ability?</h2>
             <label>
-                <input type="radio" name="skills" value="10" checked>
+                <input type="radio" name="abilities" value="none" checked>
                 Don't add a skill bonus
             </label>
             <label><input type="radio" name="abilities" value="str">Strength</label>
@@ -43,9 +43,9 @@
 
         <div class="flex-col">
             <h2>Any additional bonuses?</h2>
-            <label id="proficiency-textbox">
+            <label id="prof-textbox">
                 Proficiency bonus
-                <input type="number" id="prof-bonus" placeholder="0">
+                <input type="number" id="prof-bonus" value="0">
             </label>
             <label><input type="checkbox" id="add-prof">Add Proficiency</label>
             <label><input type="checkbox" id="add-expr">Add Expertise</label>
@@ -55,11 +55,13 @@
 
 
     <div class="d20-container">
-        <img src="assets/images/d20.png">
-        <div id="d20"></div>
+        <img id="d20-img" src="assets/images/d20.png">
+        <div id="d20-txt"></div>
     </div>
 
-    <button onclick="RollD20()" autofocus>Re-Roll</button>
+    <button onclick="rollD20()" autofocus>Re-Roll</button>
+    
+    <div class="flex-row"><div class="flex-col">
     <div id="summary"></div>
 
 </body>
