@@ -51,3 +51,26 @@ hr {
 h1 {
     font-family: "Stuart";
 }
+
+img {
+    width:400px;
+    border-radius: 25px;
+    border: #d4be98 solid 2px;
+}
+
+.d20-container {
+    position: relative;
+    text-align: center;
+}
+
+#d20 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: "Jetbrains Mono";
+    font-size: 55px;
+    /* color: var(--green); */
+    background-color: transparent;
+}
