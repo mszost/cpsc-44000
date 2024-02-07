@@ -5,20 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
-    <title>Web Dice Roller</title>
+    <title>5e Dice Roller</title>
 </head>
 
 <body>
     <h1>Web Dice-roller: D&D 5e</h1><hr>
 
-    <h2>Ability Scores</h2>
-    <div class="flexbox">
-        <label>Strength<input id="str"></label>
-        <label>Dexterity<input id="dex"></label>
-        <label>Constitution<input id="con"></label>
-        <label>Intelligence<input id="int"></label>
-        <label>Wisdom<input id="wis"></label>
-        <label>Charisma<input id="cha"></label>
+    <h2>
+        Ability Scores
+        <br>
+        <small>(Typically range ~ 8-20)</small>
+    </h2>
+    <div class="flex-row">
+        <label>Strength<input type="number" id="str"></label>
+        <label>Dexterity<input type="number" id="dex"></label>
+        <label>Constitution<input type="number" id="con"></label>
+        <label>Intelligence<input type="number" id="int"></label>
+        <label>Wisdom<input type="number" id="wis"></label>
+        <label>Charisma<input type="number" id="cha"></label>
+    </div>
+
+    <br>
+
+    <h2>Roll for Which Skill?</h2>
+
+    <div class="flex-row">
+        <!--str-->
+        <div class="flex-col">
+            <label><input type="radio" name="skills" id="str" value="athletics">Athletics</label>
+        </div>
+        <!--dex-->
+        <div class="flex-col">
+            <label><input type="radio" name="skills" id="dex" value="acrobatics">Acrobatics</label>
+            <label><input type="radio" name="skills" id="dex" value="sleight">Sleight of Hand</label>
+            <label><input type="radio" name="skills" id="dex" value="stealth">Stealth</label>
+        </div>
+        <!--con-->
+        <div class="flex-col">
+            <small>N/A</small>
+        </div>
+        <!--int-->
+        <div class="flex-col">
+            <label><input type="radio" name="skills" id="int" value="arcana">Arcana</label>
+            <label><input type="radio" name="skills" id="int" value="history">History</label>
+            <label><input type="radio" name="skills" id="int" value="investigation">Investigation</label>
+            <label><input type="radio" name="skills" id="int" value="nature">Nature</label>
+            <label><input type="radio" name="skills" id="int" value="religion">Religion</label>
+        </div>
+        <!--wis-->
+        <div class="flex-col">
+            <label><input type="radio" name="skills" id="wis" value="animal">Animal Handling</label>
+            <label><input type="radio" name="skills" id="wis" value="insight">Insight</label>
+            <label><input type="radio" name="skills" id="wis" value="medicine">Medicine</label>
+            <label><input type="radio" name="skills" id="wis" value="perception">Perception</label>
+            <label><input type="radio" name="skills" id="wis" value="survival">Survival</label>
+        </div>
+        <!--cha-->
+        <div class="flex-col">
+            <label><input type="radio" name="skills" id="cha" value="deception">Deception</label>
+            <label><input type="radio" name="skills" id="cha" value="intimidation">Intimidation</label>
+            <label><input type="radio" name="skills" id="cha" value="performance">Performance</label>
+            <label><input type="radio" name="skills" id="cha" value="persuasion">Performance</label>
+        </div>
+
     </div>
 
     <div class="d20-container">
@@ -26,7 +75,7 @@
         <div id="d20"></div>
     </div>
 
-    <button onclick="RollD20()">Re-Roll</button>
+    <button onclick="RollD20()" autofocus>Re-Roll</button>
     <div id="summary"></div>
 
 </body>
