@@ -1,4 +1,4 @@
-/* variable declarations */
+/* color variable declarations */
 /* theme: https://github.com/sainnhe/gruvbox-material */
 
 :root {
@@ -15,7 +15,6 @@
     --aqua: #89b482;
     --blue: #7daea3;
     --purple: #d3869b;
-
 }
 
 /* font declarations */
@@ -36,7 +35,7 @@
 }
 
 
-/* text styles */
+/* general text styles */
 
 * {
     text-align: center;
@@ -48,15 +47,31 @@ hr {
     border: 1px dashed var(--red);
 }
 
-h1 {
+h1,h2 {
     font-family: "Stuart";
 }
 
-img {
-    width:400px;
-    border-radius: 25px;
-    border: #d4be98 solid 2px;
+
+/* ability scores */
+
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
+
+.flexbox input {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--txt_primary) ;
+    border-radius: 10px;
+    height:110px;
+    width: 120px;
+    font-family: "Jetbrains Mono";
+    font-size: 50px;
+}
+
+/* d20 */
 
 .d20-container {
     position: relative;
@@ -68,9 +83,14 @@ img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
     font-family: "Jetbrains Mono";
     font-size: 55px;
     /* color: var(--green); */
     background-color: transparent;
+}
+
+img {
+    width:400px;
+    border-radius: 25px;
+    border: var(--txt_primary) solid 2px;
 }

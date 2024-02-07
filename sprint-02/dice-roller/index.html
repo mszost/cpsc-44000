@@ -11,9 +11,22 @@
 <body>
     <h1>Web Dice-roller: D&D 5e</h1><hr>
 
+    <h2>Ability Scores</h2>
+    <div class="flexbox">
+        <label>Strength<input id="str"></label>
+        <label>Dexterity<input id="dex"></label>
+        <label>Constitution<input id="con"></label>
+        <label>Intelligence<input id="int"></label>
+        <label>Wisdom<input id="wis"></label>
+        <label>Charisma<input id="cha"></label>
+    </div>
+
     <div class="d20-container">
         <img src="assets/images/d20.png">
         <div id="d20"></div>
     </div>
+
+    <button onclick="RollD20()">Re-Roll</button>
+    <div id="summary"></div>
 
 </body>
