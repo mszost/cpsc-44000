@@ -43,18 +43,20 @@
     background-color: var(--bg_primary);
     color: var(--txt_primary);
     font-family: "Atkinson Hyperlegible";
+    line-height: 1.55;
 }
 
-hr {
-    border: 1px dashed var(--orange);
-}
 
-h1,h2 {
+h1,h2,h3 {
     font-family: "Stuart";
 }
 
 h2 {
-    color: var(--purple);
+    color: var(--blue);
+}
+
+hr {
+    border: 1px dashed var(--red);
 }
 
 small {
@@ -64,7 +66,7 @@ small {
 }
 
 
-/* ability scores */
+/* ability scores and bonuses */
 
 .flex-row {
     display: flex;
@@ -87,13 +89,32 @@ small {
 .flex-col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .flex-col label {
     align-items: left;
     text-align: left;
 }
+
+/* makes proficiency textbox appear on the same line as the "Proficiency bonus" text */
+#proficiency-textbox {
+    display: flex; 
+}
+
+#proficiency-textbox input[type=number] {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--txt_primary) ;
+    border-radius: 4px;
+    height:1.5em;
+    width: 3em;
+    font-family: "Jetbrains Mono";
+    font-size: 1em;
+    color: var(--purple);
+    margin-left: 10px;
+}
+
 
 
 
@@ -118,5 +139,5 @@ small {
 img {
     width:400px;
     border-radius: 25px;
-    border: var(--txt_primary) solid 2px;
+    border: var(--txt_primary) solid 3px;
 }

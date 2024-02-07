@@ -10,65 +10,49 @@
 
 <body>
     <h1>Web Dice-roller: D&D 5e</h1><hr>
-
     <h2>
-        Ability Scores
-        <br>
+        Ability Scores<br>
         <small>(Typically range ~ 8-20)</small>
     </h2>
     <div class="flex-row">
-        <label>Strength<input type="number" id="str"></label>
-        <label>Dexterity<input type="number" id="dex"></label>
-        <label>Constitution<input type="number" id="con"></label>
-        <label>Intelligence<input type="number" id="int"></label>
-        <label>Wisdom<input type="number" id="wis"></label>
-        <label>Charisma<input type="number" id="cha"></label>
+        <label>Strength<input type="number" id="str" placeholder="10"></label>
+        <label>Dexterity<input type="number" id="dex" placeholder="10"></label>
+        <label>Constitution<input type="number" id="con" placeholder="10"></label>
+        <label>Intelligence<input type="number" id="int" placeholder="10"></label>
+        <label>Wisdom<input type="number" id="wis" placeholder="10"></label>
+        <label>Charisma<input type="number" id="cha" placeholder="10"></label>
     </div>
 
     <br>
 
-    <h2>Roll for Which Skill?</h2>
-
+    <!--<h2>Bonuses</h2>-->
     <div class="flex-row">
-        <!--str-->
         <div class="flex-col">
-            <label><input type="radio" name="skills" id="str" value="athletics">Athletics</label>
-        </div>
-        <!--dex-->
-        <div class="flex-col">
-            <label><input type="radio" name="skills" id="dex" value="acrobatics">Acrobatics</label>
-            <label><input type="radio" name="skills" id="dex" value="sleight">Sleight of Hand</label>
-            <label><input type="radio" name="skills" id="dex" value="stealth">Stealth</label>
-        </div>
-        <!--con-->
-        <div class="flex-col">
-            <small>N/A</small>
-        </div>
-        <!--int-->
-        <div class="flex-col">
-            <label><input type="radio" name="skills" id="int" value="arcana">Arcana</label>
-            <label><input type="radio" name="skills" id="int" value="history">History</label>
-            <label><input type="radio" name="skills" id="int" value="investigation">Investigation</label>
-            <label><input type="radio" name="skills" id="int" value="nature">Nature</label>
-            <label><input type="radio" name="skills" id="int" value="religion">Religion</label>
-        </div>
-        <!--wis-->
-        <div class="flex-col">
-            <label><input type="radio" name="skills" id="wis" value="animal">Animal Handling</label>
-            <label><input type="radio" name="skills" id="wis" value="insight">Insight</label>
-            <label><input type="radio" name="skills" id="wis" value="medicine">Medicine</label>
-            <label><input type="radio" name="skills" id="wis" value="perception">Perception</label>
-            <label><input type="radio" name="skills" id="wis" value="survival">Survival</label>
-        </div>
-        <!--cha-->
-        <div class="flex-col">
-            <label><input type="radio" name="skills" id="cha" value="deception">Deception</label>
-            <label><input type="radio" name="skills" id="cha" value="intimidation">Intimidation</label>
-            <label><input type="radio" name="skills" id="cha" value="performance">Performance</label>
-            <label><input type="radio" name="skills" id="cha" value="persuasion">Performance</label>
+            <h2>Roll for which ability?</h2>
+            <label>
+                <input type="radio" name="skills" value="10" checked>
+                Don't add a skill bonus
+            </label>
+            <label><input type="radio" name="abilities" value="str">Strength</label>
+            <label><input type="radio" name="abilities" value="dex">Dexterity</label>
+            <label><input type="radio" name="abilities" value="con">Constitution</label>
+            <label><input type="radio" name="abilities" value="int">Intelligence</label>
+            <label><input type="radio" name="abilities" value="wis">Wisdom</label>
+            <label><input type="radio" name="abilities" value="cha">Charisma</label>
         </div>
 
+        <div class="flex-col">
+            <h2>Any additional bonuses?</h2>
+            <label id="proficiency-textbox">
+                Proficiency bonus
+                <input type="number" id="prof-bonus" placeholder="0">
+            </label>
+            <label><input type="checkbox" id="add-prof">Add Proficiency</label>
+            <label><input type="checkbox" id="add-expr">Add Expertise</label>
+            <label><input type="checkbox" id="add-insp">Add Inspiration</label>
+        </div>
     </div>
+
 
     <div class="d20-container">
         <img src="assets/images/d20.png">
