@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <h1>Web Dice-roller: D&D 5e</h1><hr>
+    <h1>Web Dice Roller: D&D 5e</h1><hr>
     <h2>
         Ability Scores<br>
         <small>(Typically range ~ 8-20)</small>
     </h2>
     <div class="flex-row">
-        <label>Strength<input type="number" id="str" value="10"></label>
-        <label>Dexterity<input type="number" id="dex" value="10"></label>
-        <label>Constitution<input type="number" id="con" value="10"></label>
-        <label>Intelligence<input type="number" id="int" value="10"></label>
-        <label>Wisdom<input type="number" id="wis" value="10"></label>
-        <label>Charisma<input type="number" id="cha" value="10"></label>
+        <label>Strength<input type="number" id="Strength" value="10"></label>
+        <label>Dexterity<input type="number" id="Dexterity" value="10"></label>
+        <label>Constitution<input type="number" id="Constitution" value="10"></label>
+        <label>Intelligence<input type="number" id="Intelligence" value="10"></label>
+        <label>Wisdom<input type="number" id="Wisdom" value="10"></label>
+        <label>Charisma<input type="number" id="Charisma" value="10"></label>
     </div>
 
     <br>
@@ -33,12 +33,12 @@
                 <input type="radio" name="abilities" value="none" checked>
                 Don't add a skill bonus
             </label>
-            <label><input type="radio" name="abilities" value="str">Strength</label>
-            <label><input type="radio" name="abilities" value="dex">Dexterity</label>
-            <label><input type="radio" name="abilities" value="con">Constitution</label>
-            <label><input type="radio" name="abilities" value="int">Intelligence</label>
-            <label><input type="radio" name="abilities" value="wis">Wisdom</label>
-            <label><input type="radio" name="abilities" value="cha">Charisma</label>
+            <label><input type="radio" name="abilities" value="Strength">Strength</label>
+            <label><input type="radio" name="abilities" value="Dexterity">Dexterity</label>
+            <label><input type="radio" name="abilities" value="Constitution">Constitution</label>
+            <label><input type="radio" name="abilities" value="Intelligence">Intelligence</label>
+            <label><input type="radio" name="abilities" value="Wisdom">Wisdom</label>
+            <label><input type="radio" name="abilities" value="Charisma">Charisma</label>
         </div>
 
         <div class="flex-col">
@@ -54,14 +54,20 @@
     </div>
 
 
-    <div class="d20-container">
-        <img id="d20-img" src="assets/images/d20.png">
-        <div id="d20-txt"></div>
-    </div>
-
     <button onclick="rollD20()" autofocus>Re-Roll</button>
-    
-    <div class="flex-row"><div class="flex-col">
-    <div id="summary"></div>
+
+    <div class="d20-container">
+
+        <div class="d20-col"></div> 
+
+        <div class="d20-col-center">
+            <img id="d20-img" src="assets/images/d20.png">
+            <div id="d20-txt"></div>
+        </div>
+
+        <div class="d20-col" id="summary">
+            Summary
+        </div>
+    </div>
 
 </body>

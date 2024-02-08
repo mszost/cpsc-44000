@@ -40,8 +40,8 @@
     text-align: center;
     background-color: var(--bg_primary);
     color: var(--txt_primary);
-    font-family: "Atkinson Hyperlegible";
     line-height: 1.55;
+    font-family: "Atkinson Hyperlegible";
 }
 
 
@@ -90,11 +90,12 @@ small {
 }
 
 .flex-col label {
+    font-family: "Atkinson Hyperlegible";
     align-items: left;
     text-align: left;
 }
 
-/* makes the proficiency textbox appear on the same line as the "Proficiency bonus" label text */
+/* makes the proficiency textbox inline with the "Proficiency bonus" label */
 #prof-textbox {
     display: flex; 
 }
@@ -113,12 +114,25 @@ small {
 }
 
 
-
-
-/* d20 */
+/* d20 layout */
 .d20-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.d20-col {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 2;
+    flex-shrink: 0;
+}
+
+.d20-col-center {
     position: relative;
-    text-align: center;
+    justify-content: center;
+    align-self: center;
 }
 
 #d20-txt {
@@ -128,12 +142,33 @@ small {
     transform: translate(-50%, -50%);
     font-family: "Jetbrains Mono";
     font-size: 55px;
-    /* color: var(--green); */
     background-color: transparent;
 }
 
 #d20-img {
-    width:400px;
+    display: flex;
+    justify-content: center;
+    width: 400px;
     border-radius: 25px;
     border: var(--txt_primary) solid 3px;
+    margin: 10px;
+}
+
+/* summary */
+#summary .pos, #summary .neg, #summary p {
+    font-family: "Jetbrains Mono";
+    font-size: 0.8em;
+}
+
+#summary p {
+    font-family: "Jetbrains Mono";
+    color: var(--txt_dim);
+    margin: 0;
+}
+
+#summary .pos {
+    color: var(--green);
+}
+#summary .neg {
+    color: var(--red);
 }
