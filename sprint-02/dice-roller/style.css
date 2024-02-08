@@ -63,6 +63,27 @@ small {
     color: var(--txt_dim);
 }
 
+button {
+    font-family: "Stuart";
+    background-color: var(--bg_dim);
+    border: var(--txt_dim) 1px solid;
+    border-radius: 0.5em;
+    width: 10em;
+    height: 2.5em;
+    transition-duration: 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    color: var(--bg_dim);
+    border: var(--bg_dim) 1px solid;
+    background-color: var(--txt_primary);
+}
+
+button:active {
+    background-color: var(--txt_dim);
+    transform: translateY(2px);
+}
 
 /* ability scores and bonuses */
 .flex-row {
@@ -74,6 +95,7 @@ small {
 .flex-row input[type=number] {
     display: block;
     box-sizing: border-box;
+    background-color: var(--bg_dim);
     border: 2px solid var(--txt_primary) ;
     border-radius: 15px;
     height:100px;
@@ -103,6 +125,7 @@ small {
 #prof-textbox input[type=number] {
     display: block;
     box-sizing: border-box;
+    background-color: var(--bg_dim);
     border: 2px solid var(--txt_primary) ;
     border-radius: 4px;
     height:1.5em;
