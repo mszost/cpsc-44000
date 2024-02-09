@@ -1,0 +1,84 @@
+/* color variable declarations */
+/* theme: https://github.com/sainnhe/gruvbox-material */
+
+:root {
+    --bg_primary: #1d2021;
+    --bg_dim: #141617;
+
+    --txt_primary: #ddc7a1;
+    --txt_dim: #a89984;
+
+    --red: #ea6962;
+    --orange: #e78a4e;
+    --yellow: #d8a657;
+    --green: #a9b665;
+    --aqua: #89b482;
+    --blue: #7daea3;
+    --purple: #d3869b;
+}
+
+
+/* font declarations */
+@font-face {
+    font-family: "Roboto Slab";
+    src: url("assets/fonts/RobotoSlab-Black.ttf");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("assets/fonts/Atkinson-Hyperlegible-Regular.otf");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("assets/fonts/JetBrainsMonoNerdFont-Medium.ttf");
+}
+
+
+/* general text styles */
+* {
+    text-align: center;
+    background-color: var(--bg_primary);
+    color: var(--txt_primary);
+    line-height: 1.55;
+    font-family: "Atkinson Hyperlegible";
+}
+
+h1,h2,h3 {
+    font-family: "Roboto Slab";
+}
+
+h1,h3 {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: var(--green);
+}
+
+hr {
+    border: 1px solid var(--orange);
+}
+
+small {
+    font-size: 12px;
+    font-family: "Jetbrains Mono";
+    color: var(--txt_dim);
+}
+
+a {
+    color: var(--blue);
+}
+
+
+ul {
+    font-family: "Atkinson Hyperlegible";
+    list-style-type: square;
+    display: table; 
+    margin: 0 auto;
+    line-height: 1.75em;
+}
+
+li {
+    text-align: left;
+}
