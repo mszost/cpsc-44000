@@ -66,13 +66,13 @@ function calculateBonuses(roll) {
         insp = Math.floor(Math.random() * 4) + 1;
     }
 
-    displaySummary(roll, abName, abScore, abBonus, prof, insp, totalBonus);
+    displaySummary(roll, abName, abScore, abBonus, prof, insp);
 
     return totalBonus;
 }
 
 
-function displaySummary(roll, abName, abScore, abBonus, prof, insp, total) {
+function displaySummary(roll, abName, abScore, abBonus, prof, insp) {
     if (roll == 20) {
         document.getElementById("summary").insertAdjacentHTML("beforeend", 
             "<div class=\"pos\">Critical Success!</div>");

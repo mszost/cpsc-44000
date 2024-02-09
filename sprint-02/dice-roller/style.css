@@ -20,6 +20,11 @@
 
 /* font declarations */
 @font-face {
+    font-family: "Roboto Slab";
+    src: url("assets/fonts/RobotoSlab-Black.ttf");
+}
+
+@font-face {
     font-family: "Atkinson Hyperlegible";
     src: url("assets/fonts/Atkinson-Hyperlegible-Regular.otf");
 }
@@ -27,11 +32,6 @@
 @font-face {
     font-family: "JetBrains Mono";
     src: url("assets/fonts/JetBrainsMonoNerdFont-Medium.ttf");
-}
-
-@font-face {
-    font-family: "Stuart";
-    src: url("assets/fonts/Stuart.ttf");
 }
 
 
@@ -46,7 +46,7 @@
 
 
 h1,h2,h3 {
-    font-family: "Stuart";
+    font-family: "Roboto Slab";
 }
 
 h2 {
@@ -64,7 +64,7 @@ small {
 }
 
 button {
-    font-family: "Stuart";
+    font-family: "Roboto Slab";
     background-color: var(--bg_dim);
     border: var(--txt_dim) 1px solid;
     border-radius: 0.5em;
