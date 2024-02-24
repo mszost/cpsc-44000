@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dice Roller on Node.js</title>
+</head>
+
+<body>
+
+<h1>Dice Roller on Node.js</h1>
+<em>Press to roll 1d20</em><br>
+<button onclick="fetchRoll()">fetchRoll()</button>
+<h2 id="roll-res"></h2>
+
+<script>
+    async function fetchRoll() {
+        const res = await fetch('/roll')
+        resText = await res.text()
+        document.getElementById('roll-res').innerHTML = resText
+    }
+</script>
+
+</body>
+</html>
