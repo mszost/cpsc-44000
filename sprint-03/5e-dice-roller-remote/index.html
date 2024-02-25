@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>5e Dice Roller</title>
+</head>
+
+<body>
+    <h1>Web Dice Roller: D&D 5e</h1><hr>
+    <h2>
+        Ability Scores<br>
+        <small>(Typically range ~ 8-20)</small>
+    </h2>
+    <div class="flex-row">
+        <label>Strength<input type="number" id="Strength" value="10"></label>
+        <label>Dexterity<input type="number" id="Dexterity" value="10"></label>
+        <label>Constitution<input type="number" id="Constitution" value="10"></label>
+        <label>Intelligence<input type="number" id="Intelligence" value="10"></label>
+        <label>Wisdom<input type="number" id="Wisdom" value="10"></label>
+        <label>Charisma<input type="number" id="Charisma" value="10"></label>
+    </div>
+
+    <br>
+
+    <!--<h2>Bonuses</h2>-->
+    <div class="flex-row">
+        <div class="flex-col">
+            <h2>Roll for which ability?</h2>
+            <label>
+                <input type="radio" name="abilities" value="none" checked>
+                Don't add a skill bonus
+            </label>
+            <label><input type="radio" name="abilities" value="Strength">Strength</label>
+            <label><input type="radio" name="abilities" value="Dexterity">Dexterity</label>
+            <label><input type="radio" name="abilities" value="Constitution">Constitution</label>
+            <label><input type="radio" name="abilities" value="Intelligence">Intelligence</label>
+            <label><input type="radio" name="abilities" value="Wisdom">Wisdom</label>
+            <label><input type="radio" name="abilities" value="Charisma">Charisma</label>
+        </div>
+
+        <div class="flex-col">
+            <h2>Any additional bonuses?</h2>
+            <label id="prof-textbox">
+                Proficiency bonus
+                <input type="number" id="prof-bonus" value="0">
+            </label>
+            <label><input type="checkbox" id="add-prof">Add Proficiency</label>
+            <label><input type="checkbox" id="add-expr">Add Expertise</label>
+            <label><input type="checkbox" id="add-insp">Add Inspiration</label>
+        </div>
+    </div>
+
+    <br>
+
+    <button onclick="rollD20()" autofocus>Roll</button>
+
+    <div class="d20-container">
+
+        <div class="d20-col"></div> 
+
+        <div class="d20-col-center">
+            <img id="d20-img" src="assets/images/d20.png">
+            <div id="d20-txt"></div>
+        </div>
+
+        <div class="d20-col" id="summary">
+            Summary
+        </div>
+    </div>
+
+</body>

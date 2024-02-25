@@ -1,0 +1,197 @@
+/* color variable declarations */
+/* theme: https://github.com/sainnhe/gruvbox-material */
+
+:root {
+    --bg_primary: #1d2021;
+    --bg_dim: #141617;
+
+    --txt_primary: #ddc7a1;
+    --txt_dim: #a89984;
+
+    --red: #ea6962;
+    --orange: #e78a4e;
+    --yellow: #d8a657;
+    --green: #a9b665;
+    --aqua: #89b482;
+    --blue: #7daea3;
+    --purple: #d3869b;
+}
+
+
+/* font declarations */
+@font-face {
+    font-family: "Roboto Slab";
+    src: url("assets/fonts/RobotoSlab-Black.ttf");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("assets/fonts/Atkinson-Hyperlegible-Regular.otf");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("assets/fonts/JetBrainsMonoNerdFont-Medium.ttf");
+}
+
+
+/* general text styles */
+* {
+    text-align: center;
+    background-color: var(--bg_primary);
+    color: var(--txt_primary);
+    line-height: 1.55;
+    font-family: "Atkinson Hyperlegible";
+}
+
+
+h1,h2,h3 {
+    font-family: "Roboto Slab";
+}
+
+h2 {
+    color: var(--blue);
+}
+
+hr {
+    border: 1px dashed var(--red);
+}
+
+small {
+    font-size: 12px;
+    font-family: "Jetbrains Mono";
+    color: var(--txt_dim);
+}
+
+button {
+    font-family: "Roboto Slab";
+    background-color: var(--bg_dim);
+    border: var(--txt_dim) 1px solid;
+    border-radius: 0.5em;
+    width: 10em;
+    height: 2.5em;
+    transition-duration: 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    color: var(--bg_dim);
+    border: var(--bg_dim) 1px solid;
+    background-color: var(--txt_primary);
+}
+
+button:active {
+    background-color: var(--txt_dim);
+    transform: translateY(2px);
+}
+
+/* ability scores and bonuses */
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.flex-row input[type=number] {
+    display: block;
+    box-sizing: border-box;
+    background-color: var(--bg_dim);
+    border: 2px solid var(--txt_primary) ;
+    border-radius: 15px;
+    height:100px;
+    width: 110px;
+    font-family: "Jetbrains Mono";
+    font-size: 40px;
+    color: var(--purple);
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flex-col label {
+    font-family: "Atkinson Hyperlegible";
+    align-items: left;
+    text-align: left;
+}
+
+/* makes the proficiency textbox inline with the "Proficiency bonus" label */
+#prof-textbox {
+    display: flex; 
+}
+
+#prof-textbox input[type=number] {
+    display: block;
+    box-sizing: border-box;
+    background-color: var(--bg_dim);
+    border: 2px solid var(--txt_primary) ;
+    border-radius: 4px;
+    height:1.5em;
+    width: 3em;
+    font-family: "Jetbrains Mono";
+    font-size: 1em;
+    color: var(--purple);
+    margin-left: 10px;
+}
+
+
+/* d20 layout */
+.d20-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.d20-col {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 2;
+    flex-shrink: 0;
+}
+
+.d20-col-center {
+    position: relative;
+    justify-content: center;
+    align-self: center;
+}
+
+#d20-txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Jetbrains Mono";
+    font-size: 55px;
+    background-color: transparent;
+}
+
+#d20-img {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    border-radius: 25px;
+    border: var(--txt_primary) solid 3px;
+    margin: 10px;
+}
+
+/* summary */
+#summary .pos, #summary .neg, #summary p {
+    font-family: "Jetbrains Mono";
+    font-size: 0.8em;
+}
+
+#summary p {
+    font-family: "Jetbrains Mono";
+    color: var(--txt_dim);
+    margin: 0;
+}
+
+#summary .pos {
+    color: var(--green);
+}
+#summary .neg {
+    color: var(--red);
+}
