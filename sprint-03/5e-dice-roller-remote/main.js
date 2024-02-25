@@ -1,8 +1,9 @@
-function rollD20() {
+async function rollD20() {
     document.getElementById("summary").innerHTML = "Summary";
     document.getElementById("d20-txt").innerHTML = "";
 
-    let roll = Math.floor(Math.random() * 20) + 1;
+    let res = await fetch('https://5e-dice-roller-api.azurewebsites.net/roll')
+    let roll = parseInt(await res.text());
 
     if (roll == 1) {
         document.getElementById("d20-txt").style.color = "var(--red)";
@@ -15,7 +16,7 @@ function rollD20() {
     } else {
         document.getElementById("d20-txt").style.color = "var(--txt_primary)";
         document.getElementById("d20-img").style.border = "var(--txt_primary) solid 3px";
-        roll += calculateBonuses(roll);
+        roll += await calculateBonuses(roll);
     }
 
     document.getElementById("d20-txt").innerHTML = roll;
