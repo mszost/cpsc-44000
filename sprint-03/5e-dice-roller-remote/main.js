@@ -2,7 +2,7 @@ async function rollD20() {
     document.getElementById("summary").innerHTML = "Summary";
     document.getElementById("d20-txt").innerHTML = "";
 
-    let res = await fetch('https://5e-dice-roller-api.azurewebsites.net/roll')
+    let res = await fetch('https://5e-dice-roller-api.azurewebsites.net/roll?d=20')
     let roll = parseInt(await res.text());
 
     if (roll == 1) {
@@ -23,11 +23,10 @@ async function rollD20() {
 }
 
 
-function calculateBonuses(roll) {
+async function calculateBonuses(roll) {
     let abName;
     let abScore;
     let abBonus;
-    let usedExpr = false;
     let prof;
     let insp;
     let totalBonus = 0;
@@ -64,7 +63,8 @@ function calculateBonuses(roll) {
 
     // inspiration bonus
     if (document.getElementById("add-insp").checked) {
-        insp = Math.floor(Math.random() * 4) + 1;
+        let res =  await fetch('https://5e-dice-roller-api.azurewebsites.net/roll?d=4');
+        insp = parseInt(await res.text());
     }
 
     displaySummary(roll, abName, abScore, abBonus, prof, insp);
